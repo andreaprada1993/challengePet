@@ -1,0 +1,39 @@
+/* Estilos para pantallas grandes */
+.containe {
+    width: 50%;
+    justify-content: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    margin-top: 2rem;
+    padding: 2rem;
+}
+.my-order-content {
+    width: 70%;
+    margin: auto;
+}
+/* Estilos para pantallas medianas */
+@media (max-width: 768px) {
+    .container {
+        width: 80%;
+        padding: 1rem;
+    }
+
+    .my-order-content {
+        width: 90%;
+        margin: auto;
+    }
+}
+/* Estilos para pantallas pequeñas */
+@media (max-width: 576px) {
+    .container {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .my-order-content {
+        width: 100%;
+        margin: auto;
+    }
+}
+section.footer {
+    position: fixed;
+}
