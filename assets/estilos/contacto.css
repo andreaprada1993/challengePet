@@ -1,0 +1,34 @@
+.boton{
+    width: 150px;
+    height: 50px;
+    background-color: #d97d2d;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    font-family: "calibri";
+    font-weight: bold;
+    transition: 0.5s;
+    color: white;
+}
+.boton:hover{
+    background-color: #d97d2d ;
+    color: white;
+}
+.container{
+    width: 1200px;
+    height: 90vh;
+    margin: 100px;
+    margin-top: 50px;
+    background-image: url(../imagenes/portada-perro-jugando.webp);
+}
+.container h1{
+    font-family: "calibri";
+    font-size: 60px;
+    font-weight: bold;
+    padding-top: 200px;
+    color: black;
+}
+.container p{
+    color: white;
+}
