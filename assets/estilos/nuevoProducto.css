@@ -1,0 +1,49 @@
+.formRgisterProduct{
+    width: 400px;
+    background: #f3b064;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: "calibri";
+    color:rgb(18, 17, 17);
+    box-shadow: 7px  13px 37px #000; 
+}
+
+.formRgisterProduct h3{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.formRgisterProduct h4{
+    height: 40px;
+    text-align:start;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.controls{
+width: 100%;
+background: white;
+padding: 10px;
+border-radius: 4px;
+margin-bottom: 16px;
+border: 1px solid rgb(11, 11, 11);
+ font-family: "calibri";
+ font-size: 18px;
+}
+
+.formRgisterProduct a:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+.formRgisterProduct .botons{
+width: 100%;
+background: rgb(14, 13, 13);
+border: none;
+padding: 12px;
+color: white;
+margin: 16px 0;
+font-size: 16px;
+}
