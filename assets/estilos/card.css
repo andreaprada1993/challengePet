@@ -1,0 +1,45 @@
+.container {
+    background-color: #f7c76e;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 50px auto; /* para centrarlo en la mitad */
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75); /* para agregar sombra */
+  }
+
+.title {
+  font-size: 24px; /* Aumentar el tamaño del título */
+  font-weight: bold; /* Hacer el título más grueso */
+  color: #fff; /* Cambiar el color del texto a blanco */
+}
+
+.my-order-content {
+  margin-top: 20px; /* Agregar un poco de espacio entre el título y el contenido */
+}
+
+.order {
+  margin-top: 20px; /* Agregar un poco de espacio entre el contenido y el total */
+  display: flex; /* Utilizar flexbox para alinear el contenido horizontalmente */
+  justify-content: space-between; /* Alinear el contenido hacia la izquierda y derecha */
+  align-items: center; /* Alinear el contenido verticalmente en el centro */
+  padding: 10px; /* Agregar un poco de espacio alrededor del contenido */
+  background-color: #fff; /* Cambiar el color del fondo del total a blanco */
+  border-radius: 5px; /* Agregar esquinas redondeadas */
+}
+
+.total {
+  font-size: 24px; /* Aumentar el tamaño del total */
+  font-weight: bold; /* Hacer el total más grueso */
+  color: #FFA500; /* Cambiar el color del total a naranja */
+}
+
+.primary-button {
+  background-color: #FFA500; /* Cambiar el color del botón a naranja */
+  color: #fff; /* Cambiar el color del texto del botón a blanco */
+  border: none; /* Quitar el borde del botón */
+  border-radius: 5px; /* Agregar esquinas redondeadas */
+  padding: 10px 20px; /* Agregar un poco de espacio alrededor del contenido */
+  font-size: 18px; /* Aumentar el tamaño del texto del botón */
+  cursor: pointer; /* Cambiar el cursor al pasar por el botón */
+  margin-top: 20px; /* Agregar un poco de espacio entre el total y el botón */
+}

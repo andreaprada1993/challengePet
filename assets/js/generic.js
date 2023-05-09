@@ -4,7 +4,6 @@ async function getCategorias() {
         let response = await fetch(url);
         response = await response.json();
         const categorias = Array.from(new Set(response.products.map(product => product.tipo)));
-        console.log(categorias)
         crearCheckboxesDeCategorias(categorias);
 
     } catch (error) {
@@ -34,19 +33,19 @@ function generateProductsCards(array, containerId) {
     const container = document.querySelector(containerId);
     container.innerHTML = "";
     for (let i = 0; i < array.length; i++) {
-        const id=array[i]._id;
+        const id = array[i]._id;
         const nameCard = array[i].nombre;
         const imgCard = array[i].imagen;
         const priceCard = array[i].precio;
         const stockCard = array[i].stock;
         const tipoCard = array[i].tipo;
         const descripcionCard = array[i].descripcion;
-        let card = cardProduct(id,nameCard, imgCard, priceCard, stockCard, tipoCard);
+        let card = cardProduct(id, nameCard, imgCard, priceCard, stockCard, tipoCard);
         container.appendChild(card);
     }
 }
 
-function cardProduct(id,nameCard, imgCard, priceCard, stockCard, tipoCard) {
+function cardProduct(id, nameCard, imgCard, priceCard, stockCard, tipoCard) {
     let content = document.createElement('div');
     content.className = "product-card";
     let card = '<img src="' + imgCard + '">\n' +
@@ -68,18 +67,41 @@ function cardProduct(id,nameCard, imgCard, priceCard, stockCard, tipoCard) {
 }
 
 async function detallesProductos(id) {
+
     try {
         let producto = await fetch(url + "/" + id).then(response => response.json()).then(data => data.product);
         Swal.fire({
             imageUrl: producto.imagen,
             imageHeight: 200,
             title: producto.nombre,
-            html: `<div class="product-info"><p class="price"> ${producto.precio}</p><p class="details"> ${producto.descripcion} </p><p class="stock"> ${producto.stock} </p><p class="Tipo"> ${producto.tipo} </p><button class="primary-button add-to-cart-button"><img src="../assets/icons/bt_add_to_cart.svg" alt="add to cart"> Add to cart</button></div>`,
+            html: `<div class="product-info"><p class="price"> ${producto.precio}</p><p class="details"> ${producto.descripcion} </p><p class="stock"> ${producto.stock} </p><p class="Tipo"> ${producto.tipo} </p><button class="primary-button add-to-cart-button"><img src="../assets/imagenes/bt_add_to_cart.svg" alt="add to cart"> Add to cart</button></div>`,
             showCloseButton: true,
             showConfirmButton: false
-        });
+        })
+        const addToCartButton = document.querySelector('.add-to-cart-button');
+        addToCartButton.addEventListener('click', () => adicionarProductos(id));
     } catch (error) {
-
-
+        console.log(error)
     }
 }
+
+
+let cart = [];
+
+function adicionarProductos(id) {
+    if ([...new Set(cart.map(e => e.id))].includes(id)) {
+        cart.find(e => e.id === id).cantidad++;
+    } else {
+        let productoAdd = { id: id, cantidad: 1 }
+        cart.push(productoAdd);
+    }
+    localStorage.setItem('cart',JSON.stringify(cart))
+}
+
+
+    
+
+  
+
+
+

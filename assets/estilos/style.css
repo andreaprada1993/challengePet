@@ -203,3 +203,81 @@ section {
 }
 
 /* footer*/
+.filas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .imglista {
+    max-width: 100px;
+    max-height: 100px;
+    margin: auto;
+  }
+  
+  .infotit {
+    padding: 0 10px;
+    text-align: left;
+  }
+  
+  .card-title {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .colinfo {
+    text-align: center;
+  }
+  
+  .botoneliminar {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #dc3545;
+  }
+  
+  .quitarunidad {
+    margin-top: -3px;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .filas {
+      flex-direction: column;
+    }
+  
+    .col-lg-3 {
+      order: 2;
+      margin-bottom: 10px;
+    }
+  
+    .col-lg-4 {
+      order: 1;
+      margin-bottom: 10px;
+    }
+  
+    .col-lg-2 {
+      order: 3;
+    }
+  
+    .col-lg-1 {
+      order: 4;
+    }
+  }
+  .botoneliminar {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  
