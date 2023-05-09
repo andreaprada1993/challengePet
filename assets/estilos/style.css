@@ -11,7 +11,7 @@
 
 nav {
     background-color: orange;
-    height: 150px;
+    height: 120px;
     width: 100%;
 }
 
@@ -33,7 +33,7 @@ nav ul {
 
 nav ul li {
     display: inline-block;
-    line-height: 200px;
+    line-height: 100px;
     margin: 0 5px;
 }
 
